@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['documentation_20doxygen_20_3a_0',['4. API Documentation (Doxygen):',['../index.html#autotoc_md6',1,'']]],
-  ['doxygen_20_3a_1',['4. API Documentation (Doxygen):',['../index.html#autotoc_md6',1,'']]]
+  ['features_0',['Features',['../index.html#autotoc_md2',1,'']]],
+  ['for_20confidential_20assets_1',['MPT-Crypto: Cryptographic Primitives for Confidential Assets',['../index.html',1,'']]]
 ];

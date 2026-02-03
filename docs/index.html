@@ -125,10 +125,65 @@ Features</h1>
 <li><b>Linkage Proof:</b> Proves consistency between an ElGamal ciphertext (used for transfer) and a Pedersen Commitment (used for the range proof).</li>
 <li><b>Proof of Knowledge (PoK):</b> Proves ownership of the secret key during account registration to prevent rogue key attacks.</li>
 </ul>
-<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
-4. API Documentation (Doxygen):</h2>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Building and Testing</h1>
 <h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
-<a href="https://mrtcnk.github.io/mpt-crypto/">https://mrtcnk.github.io/mpt-crypto/</a></h2>
+Prerequisites</h2>
+<p>Before building, ensure you have the following installed:</p>
+<ul>
+<li><b>CMake</b> (version 3.10 or higher)</li>
+<li><b>C Compiler</b> (GCC, Clang, or AppleClang)</li>
+<li><b>OpenSSL 3.x</b> (development headers and libraries)</li>
+</ul>
+<p>On macOS with Homebrew: </p><div class="fragment"><div class="line">brew install cmake openssl@3</div>
+</div><!-- fragment --><p>On Ubuntu/Debian: </p><div class="fragment"><div class="line">sudo apt-get install cmake libssl-dev build-essential</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Dependency Setup</h2>
+<p>This library requires <span class="tt">libsecp256k1</span> as a sibling directory. Clone it from the bitcoin-core repository:</p>
+<div class="fragment"><div class="line"># From the parent directory of mpt-crypto</div>
+<div class="line">cd ..</div>
+<div class="line">git clone https://github.com/bitcoin-core/secp256k1.git</div>
+</div><!-- fragment --><p>Your directory structure should look like: </p><div class="fragment"><div class="line">Projects/</div>
+<div class="line">├── mpt-crypto/</div>
+<div class="line">└── secp256k1/</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Build Instructions</h2>
+<ol type="1">
+<li><b>Create the build directory and configure:</b> <div class="fragment"><div class="line">cd mpt-crypto</div>
+<div class="line">mkdir -p build &amp;&amp; cd build</div>
+<div class="line">cmake ..</div>
+</div><!-- fragment --></li>
+<li><b>Build the library and tests:</b> <div class="fragment"><div class="line">make -j4</div>
+</div><!-- fragment --></li>
+</ol>
+<h3 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+Platform-Specific Notes</h3>
+<p><b>macOS (Apple Silicon):</b> If you encounter architecture mismatch errors with OpenSSL, explicitly set the architecture: </p><div class="fragment"><div class="line">cmake -DCMAKE_OSX_ARCHITECTURES=arm64 ..</div>
+</div><!-- fragment --><p><b>macOS (Intel):</b> Use <span class="tt">x86_64</span> instead: </p><div class="fragment"><div class="line">cmake -DCMAKE_OSX_ARCHITECTURES=x86_64 ..</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md11"></a>
+Running Tests</h2>
+<p>After building, run the test suite using CTest:</p>
+<div class="fragment"><div class="line">cd build</div>
+<div class="line">ctest --output-on-failure</div>
+</div><!-- fragment --><p>Or run individual tests directly: </p><div class="fragment"><div class="line">./tests/test_elgamal</div>
+<div class="line">./tests/test_bulletproof_agg</div>
+<div class="line">./tests/test_commitments</div>
+</div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="autotoc_md12"></a>
+Expected Results</h2>
+<p>The following tests should pass:</p><ul>
+<li><span class="tt">test_bulletproof_agg</span> - Aggregated Bulletproof range proofs</li>
+<li><span class="tt">test_commitments</span> - Pedersen commitments</li>
+<li><span class="tt">test_elgamal</span> - ElGamal encryption/decryption</li>
+<li><span class="tt">test_elgamal_verify</span> - ElGamal verification</li>
+<li><span class="tt">test_equality_proof</span> - Equality proofs</li>
+<li><span class="tt">test_ipa</span> - Inner Product Argument (IPA) Core Logic</li>
+<li><span class="tt">test_link_proof</span> - Linkage proofs</li>
+<li><span class="tt">test_pok_sk</span> - Proof of knowledge of secret key</li>
+<li><span class="tt">test_same_plaintext</span> - Same plaintext proofs</li>
+<li><span class="tt">test_same_plaintext_multi</span> - Multi-recipient same plaintext proofs</li>
+<li><span class="tt">test_same_plaintext_multi_shared_r</span> - Shared randomness variant</li>
+</ul>
+<p><b>Note:</b> <span class="tt">test_bulletproof.c</span> is excluded from the build because the aggregated implementation (<a class="el" href="bulletproof__aggregated_8c.html" title="Aggregated Bulletproof Range Proofs (Logarithmic Size).">bulletproof_aggregated.c</a>) is fully general; verifying the m=1 case is now covered by test_bulletproof_agg.c. </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->

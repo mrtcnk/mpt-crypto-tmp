@@ -104,6 +104,7 @@ $(function(){initNavTree('mpt__scalar_8c.html','',''); });
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="secp256k1__mpt_8h_source.html">secp256k1_mpt.h</a>&quot;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;openssl/crypto.h&gt;</code><br />
 <code>#include &quot;util.h&quot;</code><br />
 <code>#include &quot;int128.h&quot;</code><br />
 <code>#include &quot;int128_impl.h&quot;</code><br />
@@ -114,21 +115,23 @@ Include dependency graph for mpt_scalar.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="mpt__scalar_8c__incl.png" border="0" usemap="#asrc_2mpt__scalar_8c" loading="lazy" alt=""/></div>
 <map name="asrc_2mpt__scalar_8c" id="asrc_2mpt__scalar_8c">
-<area shape="rect" title="Scalar Field Arithmetic Abstraction Layer." alt="" coords="329,5,446,31"/>
+<area shape="rect" title="Scalar Field Arithmetic Abstraction Layer." alt="" coords="429,5,546,31"/>
 <area shape="rect" href="secp256k1__mpt_8h.html" title=" " alt="" coords="43,79,167,105"/>
-<area shape="poly" title=" " alt="" coords="338,34,169,77,167,72,341,29"/>
+<area shape="poly" title=" " alt="" coords="428,33,183,79,182,74,429,28"/>
 <area shape="rect" title=" " alt="" coords="192,79,256,105"/>
-<area shape="poly" title=" " alt="" coords="362,31,266,75,264,70,357,33"/>
-<area shape="rect" title=" " alt="" coords="280,79,330,105"/>
-<area shape="poly" title=" " alt="" coords="376,30,332,71,329,66,371,33"/>
-<area shape="rect" title=" " alt="" coords="354,79,421,105"/>
-<area shape="poly" title=" " alt="" coords="389,29,390,65,385,62,386,33"/>
-<area shape="rect" title=" " alt="" coords="445,79,544,105"/>
-<area shape="poly" title=" " alt="" coords="406,29,466,70,461,70,405,34"/>
-<area shape="rect" title=" " alt="" coords="568,79,634,105"/>
-<area shape="poly" title=" " alt="" coords="424,29,556,74,551,75,424,34"/>
-<area shape="rect" title=" " alt="" coords="658,79,757,105"/>
-<area shape="poly" title=" " alt="" coords="443,29,646,76,641,77,442,34"/>
+<area shape="poly" title=" " alt="" coords="440,33,272,80,270,75,445,31"/>
+<area shape="rect" title=" " alt="" coords="280,79,397,105"/>
+<area shape="poly" title=" " alt="" coords="465,31,378,74,376,69,460,32"/>
+<area shape="rect" title=" " alt="" coords="422,79,471,105"/>
+<area shape="poly" title=" " alt="" coords="483,30,463,68,459,63,479,33"/>
+<area shape="rect" title=" " alt="" coords="495,79,563,105"/>
+<area shape="poly" title=" " alt="" coords="496,29,517,66,512,65,493,34"/>
+<area shape="rect" title=" " alt="" coords="586,79,685,105"/>
+<area shape="poly" title=" " alt="" coords="513,29,599,72,594,72,512,34"/>
+<area shape="rect" title=" " alt="" coords="709,79,776,105"/>
+<area shape="poly" title=" " alt="" coords="531,29,697,77,692,77,531,34"/>
+<area shape="rect" title=" " alt="" coords="800,79,898,105"/>
+<area shape="poly" title=" " alt="" coords="547,28,787,77,782,78,547,34"/>
 <area shape="rect" title=" " alt="" coords="5,153,101,178"/>
 <area shape="poly" title=" " alt="" coords="99,104,73,142,69,138,94,106"/>
 <area shape="rect" title=" " alt="" coords="125,153,189,178"/>
@@ -179,7 +182,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mpt__scalar_8c_source.html#l00043">43</a> of file <a class="el" href="mpt__scalar_8c_source.html">mpt_scalar.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mpt__scalar_8c_source.html#l00044">44</a> of file <a class="el" href="mpt__scalar_8c_source.html">mpt_scalar.c</a>.</p>
 
 </div>
 </div>
@@ -195,7 +198,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mpt__scalar_8c_source.html#l00040">40</a> of file <a class="el" href="mpt__scalar_8c_source.html">mpt_scalar.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mpt__scalar_8c_source.html#l00041">41</a> of file <a class="el" href="mpt__scalar_8c_source.html">mpt_scalar.c</a>.</p>
 
 </div>
 </div>
@@ -224,7 +227,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mpt__scalar_8c_source.html#l00059">59</a> of file <a class="el" href="mpt__scalar_8c_source.html">mpt_scalar.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mpt__scalar_8c_source.html#l00060">60</a> of file <a class="el" href="mpt__scalar_8c_source.html">mpt_scalar.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -278,7 +281,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mpt__scalar_8c_source.html#l00075">75</a> of file <a class="el" href="mpt__scalar_8c_source.html">mpt_scalar.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mpt__scalar_8c_source.html#l00086">86</a> of file <a class="el" href="mpt__scalar_8c_source.html">mpt_scalar.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -324,7 +327,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mpt__scalar_8c_source.html#l00067">67</a> of file <a class="el" href="mpt__scalar_8c_source.html">mpt_scalar.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mpt__scalar_8c_source.html#l00073">73</a> of file <a class="el" href="mpt__scalar_8c_source.html">mpt_scalar.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -394,7 +397,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mpt__scalar_8c_source.html#l00082">82</a> of file <a class="el" href="mpt__scalar_8c_source.html">mpt_scalar.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mpt__scalar_8c_source.html#l00096">96</a> of file <a class="el" href="mpt__scalar_8c_source.html">mpt_scalar.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -434,7 +437,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mpt__scalar_8c_source.html#l00089">89</a> of file <a class="el" href="mpt__scalar_8c_source.html">mpt_scalar.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mpt__scalar_8c_source.html#l00106">106</a> of file <a class="el" href="mpt__scalar_8c_source.html">mpt_scalar.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

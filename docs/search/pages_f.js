@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['mpt_20crypto_0',['&lt;a href=&quot;https://mrtcnk.github.io/mpt-crypto/&quot;&gt;https://mrtcnk.github.io/mpt-crypto/&lt;/a&gt;',['../index.html#autotoc_md7',1,'']]],
-  ['mpt_20crypto_3a_20cryptographic_20primitives_20for_20confidential_20assets_1',['MPT-Crypto: Cryptographic Primitives for Confidential Assets',['../index.html',1,'']]],
-  ['mrtcnk_20github_20io_20mpt_20crypto_2',['&lt;a href=&quot;https://mrtcnk.github.io/mpt-crypto/&quot;&gt;https://mrtcnk.github.io/mpt-crypto/&lt;/a&gt;',['../index.html#autotoc_md7',1,'']]]
+  ['range_20proofs_20bulletproofs_0',['2. Range Proofs (Bulletproofs)',['../index.html#autotoc_md4',1,'']]],
+  ['results_1',['Expected Results',['../index.html#autotoc_md12',1,'']]],
+  ['running_20tests_2',['Running Tests',['../index.html#autotoc_md11',1,'']]]
 ];

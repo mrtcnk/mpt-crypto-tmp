@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['features_0',['Features',['../index.html#autotoc_md2',1,'']]],
-  ['fold_5fgenerators_1',['fold_generators',['../bulletproof__aggregated_8c.html#a8e7b1a6b41478b8ecc1431c9d19374e2',1,'bulletproof_aggregated.c']]],
-  ['for_20confidential_20assets_2',['MPT-Crypto: Cryptographic Primitives for Confidential Assets',['../index.html',1,'']]]
+  ['instructions_0',['Build Instructions',['../index.html#autotoc_md9',1,'']]],
+  ['ipa_5fverify_5fexplicit_1',['ipa_verify_explicit',['../bulletproof__aggregated_8c.html#a973f4819c6216ff34f80888dca08e8c4',1,'bulletproof_aggregated.c']]]
 ];

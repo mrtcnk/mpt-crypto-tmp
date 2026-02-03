@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['https_3a_20mrtcnk_20github_20io_20mpt_20crypto_0',['&lt;a href=&quot;https://mrtcnk.github.io/mpt-crypto/&quot;&gt;https://mrtcnk.github.io/mpt-crypto/&lt;/a&gt;',['../index.html#autotoc_md7',1,'']]]
+  ['notes_0',['Platform-Specific Notes',['../index.html#autotoc_md10',1,'']]]
 ];

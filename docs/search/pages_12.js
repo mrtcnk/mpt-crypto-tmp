@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['range_20proofs_20bulletproofs_0',['2. Range Proofs (Bulletproofs)',['../index.html#autotoc_md4',1,'']]]
+  ['zero_20knowledge_20proofs_20sigma_20protocols_0',['3. Zero-Knowledge Proofs (Sigma Protocols)',['../index.html#autotoc_md5',1,'']]]
 ];
